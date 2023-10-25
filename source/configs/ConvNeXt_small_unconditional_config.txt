@@ -1,0 +1,16 @@
+[settings]
+experiment_name = ConvNeXt_small_unconditional
+metadata_file = /data/DS/Projekte/covid19/data/segmentation_test/image_patient_splits_fps.csv
+additional_data_folder = /data/DS/Projekte/covid19/notebooks/Synth_Paper/images/final/unconditional
+model_dir = models
+cuda = 1
+repeated_runs = 5
+num_synth_images = [100,250,500,750,1000]
+
+[model]
+resolution = 224
+model_architecture = convnext_small
+dropout_percent = 0.5
+epochs = 60
+augmentations = strong
+batch_size = 8

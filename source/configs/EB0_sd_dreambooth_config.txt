@@ -1,0 +1,16 @@
+[settings]
+experiment_name = EB0_sd_dreambooth
+metadata_file = /data/DS/Projekte/covid19/data/segmentation_test/image_patient_splits_fps.csv
+additional_data_folder = /data/DS/Projekte/covid19/notebooks/Synth_Paper/images/final/sd_dreambooth
+model_dir = models
+cuda = 1
+repeated_runs = 5
+num_synth_images = [100,250,500,750,1000]
+
+[model]
+resolution = 224
+model_architecture = efficientnet_b0
+dropout_percent = 0.5
+epochs = 35
+augmentations = strong
+batch_size = 8
